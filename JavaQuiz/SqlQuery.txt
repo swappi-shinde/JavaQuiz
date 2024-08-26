@@ -1,0 +1,32 @@
+use quizdb; 
+CREATE TABLE questions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    question TEXT NOT NULL,
+    option1 VARCHAR(255) NOT NULL,
+    option2 VARCHAR(255) NOT NULL,
+    option3 VARCHAR(255) NOT NULL,
+    option4 VARCHAR(255) NOT NULL,
+    correct_option INT NOT NULL
+);
+
+-- Table to store student scores
+CREATE TABLE student_scores (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    student_id VARCHAR(50) NOT NULL,
+    student_name VARCHAR(255) NOT NULL,
+    score INT NOT NULL
+);
+INSERT INTO questions (question, option1, option2, option3, option4, correct_option) VALUES
+('What is the default value of a boolean variable?', 'true', 'false', 'null', '0', 2),
+('Which of the following is a valid declaration of a char?', 'char c = 100;', 'char c = "100";', 'char c = \'100\';', 'char c = 100L;', 1),
+('What is the size of a float in Java?', '4 bits', '8 bits', '16 bits', '32 bits', 4),
+('Which keyword is used to inherit a class in java ?', 'implement', 'super', 'extends', 'inherits', 3),
+('What is the size of int variable in java ?', '16 bits', '32 bits', '64 bits', '8 bits', 2),
+('Which of the following is not a keyword in java ?', 'static', 'try', 'String', 'new', 3),
+('Which of the following is not oops concept in java ?', 'compilation', 'inheritance', 'polymorphism', 'encapsulation', 1),
+('Which of these keyword is used to define interface in java ?', 'intf', 'interface', 'Intf', 'Interface', 2),
+('Which of these packages contain the exception stack overflow in java ?', 'java.io', 'java.system', 'java.lang', 'java.util', 3),
+('who invented java programming ?', 'Guido van Rossum', 'Dennis Ritchie', 'Bjarne Stroustrap', 'James Gosling', 4),
+('Which of the following is not a java feature ?', 'object-oriented', 'use of pointers', 'portable', 'Dynamic and Extensible', 2),
+('What is the extension of java code files ?', '.java', '.js', '.txt', '.class', 1),
+('Which of the following is a superclass of every class in java ?', 'Arraylist', 'Abstact class', 'object class', 'String', 3); 
